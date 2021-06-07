@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,6 +18,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+@Table(name = "usuarios")
 public class Usuario implements Serializable {
 
   private static final long serialVersionUID = -1631894712067032768L;
@@ -26,7 +28,7 @@ public class Usuario implements Serializable {
   private Long id;
 
   @Column(unique = true, length = 20)
-  private String userName;
+  private String username;
 
   @Column(length = 60)
   private String password;
